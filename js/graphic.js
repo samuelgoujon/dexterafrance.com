@@ -151,7 +151,7 @@ function renderChart() {
                 }
                 return '#fff';
             })
-            .attr('stroke', '#fff')
+            .attr('stroke', '#000')
             .attr('stroke-width', 1)
             .attr('cursor', d => d.isGroup ? null : 'pointer')
             .on('mouseover', function (d) {
