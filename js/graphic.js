@@ -149,9 +149,9 @@ function renderChart() {
                 if (d.isGroup) {
                     return colorScale(d.node);
                 }
-                return '#000';
+                return '#fff';
             })
-            .attr('stroke', '#000')
+            .attr('stroke', '#fff')
             .attr('stroke-width', 1)
             .attr('cursor', d => d.isGroup ? null : 'pointer')
             .on('mouseover', function (d) {
