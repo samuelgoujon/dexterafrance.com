@@ -201,7 +201,7 @@ function renderChart() {
                 if (d.isGroup && d.node != 'Contre-révolutionnaires') {
                     return '#000'
                 };
-                return '#fff';
+                return '#000';
             })
             .attr('font-weight', d => d.isGroup ? 'bold' : null)
             .attr('font-size', d => d.isGroup ? attrs.orgFontSize + 'px' : attrs.nodesFontSize + 'px')
