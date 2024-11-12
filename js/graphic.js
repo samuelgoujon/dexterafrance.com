@@ -149,7 +149,7 @@ function renderChart() {
                 if (d.isGroup) {
                     return colorScale(d.node);
                 }
-                return '#fff';
+                return '#000';
             })
             .attr('stroke', '#000')
             .attr('stroke-width', 1)
