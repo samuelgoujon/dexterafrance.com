@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "description": "",
   "engines": {
-    "node": "v8.11.3"
+    "node": "10.24"
   },
   "main": "server.js",
   "scripts": {
@@ -26,9 +26,5 @@
   "devDependencies": {
     "request": "^2.88.0",
     "tape": "^4.7.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://git.heroku.com/dexterafrance.git"
   }
 }

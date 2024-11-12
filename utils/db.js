@@ -1,15 +1,17 @@
-var csv = require("csvtojson");
+var csv = require('csvtojson');
 var mongojs = require('mongojs')
 var feedRead = require('./feed-read');
 var keywords = require('./keywords');
 var axios = require('axios');
 
-var url = 'mongodb://heroku_4q530qcp:85d95dv3hkim121ja667jnd79c@ds117423.mlab.com:17423/heroku_4q530qcp';
-
 var csvFilePath = './public/data/dextera_orgs.csv';
 
+const USERNAME = process.env.MONGO_INITDB_ROOT_USERNAME;
+const PASSWORD = process.env.MONGO_INITDB_ROOT_PASSWORD;
+const DATABASE = process.env.MONGO_INITDB_DATABASE;
+
+var url = `mongodb://${USERNAME}:${PASSWORD}@mongodb:27017/${DATABASE}`;
 var db = mongojs(url, ['dextera']); // remote db
-// var db = mongojs('dextera'); // local db
 
 function writeFeedsToDatabase () {
     csv()

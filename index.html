@@ -8,7 +8,7 @@
       <meta name="description" content="Les événements pour la France" />
       <meta name="keywords" content="" />
       <meta name="author" content="Dextera" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
       <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
@@ -37,6 +37,15 @@
       <script type="text/javascript" src="js/graphic.js"></script>
       <script type="text/javascript" src="js/main.js"></script>
 
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108171661-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-108171661-1');
+      </script>
    </head>
    <body>
       <nav class="navbar navbar-default">
@@ -46,17 +55,17 @@
                <a class="navbar-brand" href="#"><img src="images/logo.svg">dextera</a>
             </div>
             <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
+               <li><a href="https://m.me/dexterafrance" target="_blank"><i class="fa fa-commenting-o fa-lg"></i></a></li>
                <!--<li><a href="https://www.facebook.com/dexterafrance" target="_blank"><i class="fa fa-facebook fa-lg"></i></a></li>-->
-               <li><a href="https://www.twitter.com/dexterafrance" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
-               <li><a href="https://t.me/dexterafrance" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
-               <li><a href="https://vk.com/dexterafrance" target="_blank"><i class="fab fa-vk"></i></a></li></a></li>
-               <!--<li><a href="http://www.dexterafrance.com/rss" target="_blank"><i class="fa-solid fa-rss"></i></a></li>-->
+               <li><a href="https://www.twitter.com/dexterafrance" target="_blank"><i class="fa fa-twitter fa-lg"></i></a></li>
+               <li><a href="https://vk.com/dexterafrance" target="_blank"><i class="fa fa-vk fa-lg"></i></a></li>
+               <li><a href="http://www.dexterafrance.com/rss" target="_blank"><i class="fa fa-rss fa-lg"></i></a></li>
             </ul>
          </div>
       </nav>
       <div class="container-fluid " id="main-container">
          <div class="row">
-            <!--<div class="col-md-4 col-lg-3" style="padding-right:0px; padding-left:0px;overflow-x: hidden;">
+            <div class="col-md-4 col-lg-3" style="padding-right:0px; padding-left:0px;overflow-x: hidden;">
                <div id="events-panel">
                   <h2> Événements à venir </h2>
                   <div class="search-container">
@@ -71,11 +80,46 @@
                       <i class="fa fa-chevron-left" aria-hidden="true"></i> RETOUR</button>
                     </div>
                </div>
-            </div>-->
-            <div class="col-md-12 col-lg-12 hidden-sm hidden-xs"  style="padding-right:0px; padding-left:0px;">
+            </div>
+            <div class="col-md-8 col-lg-9 hidden-sm hidden-xs"  style="padding-right:0px; padding-left:0px;">
                <div id="svg-container"></div>
             </div>
          </div>
       </div>
+      <script>
+         window.fbAsyncInit = function() {
+           FB.init({
+             appId            : '1945174992423733',
+             autoLogAppEvents : true,
+             xfbml            : true,
+             version          : 'v2.10'
+           });
+           FB.AppEvents.logPageView();
+         };
+
+         (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/fr_FR/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+      </script>
+      <!-- Go to www.addthis.com/dashboard to customize your tools -->
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59ef5b6617798083"></script>
+      <script type="text/javascript">
+      var addthis_config = addthis_config||{};
+          addthis_config.data_track_clickback = false;
+      var addthis_share = addthis_share || {}
+          addthis_share = {
+      	  passthrough : {
+        	twitter: {
+              url: "http://www.dexterafrance.com",
+              text: "Les événements pour la France",
+        	    via: "dexterafrance"
+        	    }
+      	  }
+      }
+      </script>
    </body>
 </html>

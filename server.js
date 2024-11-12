@@ -7,7 +7,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.use('/rss', rss);
 
-app.use('/api', api)
+app.use('/api', api);
 
 app.set('port', (process.env.PORT || 5000));
 
