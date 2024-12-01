@@ -49,9 +49,9 @@ function renderChart() {
           .on("zoom", zoomed)
 
         let colorScale = d3.scaleOrdinal().domain([
-            'Libéraux', 'Nationalistes', 'Conservateurs', 'Identitaires', 'Contre-révolutionnaires', 'Nationaux-révolutionnaires', 'Antivax', 'Pro-russes', 'Antimodernes'
+            'Libéraux', 'Nationalistes', 'Conservateurs', 'Identitaires', 'Contre-révolutionnaires', 'Nationaux-révolutionnaires', 'Antivax', 'Pro-russes', 'Antimodernes', 'Gilets jaunes & Agriculteurs'
         ]).range([
-            '#fff', '#fff', '#fff', '#fff', '#fff', '#fff'
+            '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff'
         ])
 
         let scaleRadius = d3.scaleLinear()
