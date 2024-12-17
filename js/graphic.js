@@ -3,8 +3,8 @@ function renderChart() {
     // Exposed variables
     var attrs = {
       id: "ID" + Math.floor(Math.random() * 1000000),  // Id for event handlings
-      svgWidth: 400,
-      svgHeight: 400,
+      svgWidth: 600,
+      svgHeight: 600,
       marginTop: 5,
       marginBottom: 5,
       marginRight: 5,
@@ -49,7 +49,7 @@ function renderChart() {
           .on("zoom", zoomed)
 
         let colorScale = d3.scaleOrdinal().domain([
-            'Libéraux', 'Nationalistes', 'Conservateurs', 'Identitaires', 'Contre-révolutionnaires', 'Nationaux-révolutionnaires', 'Antivax', 'Pro-russes', 'Antimodernes', 'Gilets jaunes & Agriculteurs'
+            'Pro-russes','Libéraux','Nationalistes','Conservateurs','Identitaires','Contre-révolutionnaires','Nationaux-révolutionnaires','Antivax','Antimodernes','Gilets jaunes & Agriculteurs'
         ]).range([
             '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff'
         ])
